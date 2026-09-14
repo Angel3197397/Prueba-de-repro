@@ -1,0 +1,21 @@
+{
+  "name": "Mi Reproductor",
+  "short_name": "Reproductor",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "description": "Reproductor de musica web",
+  "icons": [
+    {
+      "src": "https://picsum.photos/192/192",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://picsum.photos/512/512",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
