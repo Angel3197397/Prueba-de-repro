@@ -10,13 +10,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlAp31AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACdJREFUeN3twTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAACgNxB4AAEv6T3sAAAAAElFTkSuQmCC",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/192px-Spotify_logo_without_text.svg.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAICAMAAAB323L3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAADpJREFUeN3twTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgb314AAEV93LFAAAAAElFTkSuQmCC",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/512px-Spotify_logo_without_text.svg.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
