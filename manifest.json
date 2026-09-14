@@ -10,13 +10,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/fawazahmed0/currency-api/1/icons/192.png",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlAp31AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACdJREFUeN3twTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAACgNxB4AAEv6T3sAAAAAElFTkSuQmCC",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://raw.githubusercontent.com/fawazahmed0/currency-api/1/icons/512.png",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAICAMAAAB323L3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAADpJREFUeN3twTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgb314AAEV93LFAAAAAElFTkSuQmCC",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
