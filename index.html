@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Reproductor APK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .player-card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 350px;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    h2 { margin: 10px 0 5px; font-size: 1.2rem; }
+    p { color: #b3b3b3; margin: 0 0 15px; font-size: 0.9rem; }
+    audio { width: 100%; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="player-card">
+    <!-- Portada de ejemplo -->
+    <img id="portada" src="https://picsum.photos/300/300" alt="Portada del álbum">
+    
+    <h2 id="titulo">Canción de Prueba</h2>
+    <p id="artista">Artista de Ejemplo</p>
+
+    <!-- Reproductor de Audio (Audio MP3 de libre uso de ejemplo) -->
+    <audio id="miAudio" controls preload="metadata">
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById('miAudio');
+
+    // Configuración de MediaSession API para Android
+    function configurarMediaSession() {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: 'Canción de Prueba',
+          artist: 'Artista de Ejemplo',
+          album: 'Mi Álbum APK',
+          artwork: [
+            { src: 'https://picsum.photos/300/300', sizes: '300x300', type: 'image/jpeg' }
+          ]
+        });
+
+        // Controles desde la barra de notificaciones / pantalla de bloqueo
+        navigator.mediaSession.setActionHandler('play', () => audio.play());
+        navigator.mediaSession.setActionHandler('pause', () => audio.pause());
+
+        navigator.mediaSession.setActionHandler('seekbackward', () => {
+          audio.currentTime = Math.max(audio.currentTime - 10, 0);
+        });
+        
+        navigator.mediaSession.setActionHandler('seekforward', () => {
+          audio.currentTime = Math.min(audio.currentTime + 10, audio.duration);
+        });
+      }
+    }
+
+    // Sincronizar estado de reproducción
+    audio.addEventListener('play', () => {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'playing';
+      }
+      configurarMediaSession();
+    });
+
+    audio.addEventListener('pause', () => {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = 'paused';
+      }
+    });
+  </script>
+</body>
+</html>
