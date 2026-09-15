@@ -3,6 +3,7 @@
   "name": "Reproductor",
   "short_name": "Reproductor",
   "start_url": "./index.html",
+  "scope": "/Prueba-de-repro/",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#121212",
@@ -10,16 +11,16 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/192px-Spotify_logo_without_text.svg.png",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/512px-Spotify_logo_without_text.svg.png",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ]
 }
